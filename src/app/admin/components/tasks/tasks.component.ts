@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { CalendarOptions } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
+// import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-tasks',
@@ -11,5 +10,9 @@ export class TasksComponent {
   dateEntry: Date | undefined;
   exitEntry: Date | undefined;
 
+  // constructor(private messageService: MessageService) {}
 
+  showSuccess() {
+    // this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
+}
 }
