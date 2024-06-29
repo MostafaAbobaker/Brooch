@@ -11,6 +11,7 @@ import { ToastModule } from 'primeng/toast';
 import { CalendarModule } from 'primeng/calendar';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorInterceptor } from './shared/interceptor/http-interceptor.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpInterceptorInterceptor } from './shared/interceptor/http-intercepto
     SharedModule,
     FullCalendarModule,
     ToastModule,
-    CalendarModule
+    CalendarModule,
+    BrowserAnimationsModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorInterceptor,multi: true

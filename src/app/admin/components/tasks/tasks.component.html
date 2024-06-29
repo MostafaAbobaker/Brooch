@@ -370,9 +370,12 @@
 
   </div>
   <div class="offcanvas-footer">
-    <!-- <p-toast></p-toast> -->
+    <p-toast [showTransitionOptions]="'0ms'"   [hideTransitionOptions]="'0ms'"></p-toast>
+
     <button class="btn btn-primary bg-gradient" (click)="showSuccess()">إضافة</button>
-    <button class="btn btn-outline-danger" data-bs-dismiss="offcanvas" aria-label="Close">إلغاء</button>
+    <p-toast [showTransitionOptions]="'0ms'"   [hideTransitionOptions]="'0ms'"></p-toast>
+
+    <button class="btn btn-outline-danger" (click)="showError()" >إلغاء</button>
     </div>
 </div>
 <!-- End offcanvas -->

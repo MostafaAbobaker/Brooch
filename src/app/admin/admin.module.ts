@@ -43,7 +43,7 @@ import { FormsModule } from '@angular/forms';
     FullCalendarModule,
     ToastModule,
     CalendarModule,
-    FormsModule
-  ]
+    FormsModule,
+  ],
 })
 export class AdminModule { }
