@@ -2,19 +2,25 @@
   --width-sidebar: 16.66666666666667% ;
   padding: 1rem 2rem;
   padding-inline-start: calc(var(--width-sidebar) + 1.5rem );
-  @media (min-width: 1400px)  {
-    padding-inline-start: calc(var(--width-sidebar) + 2.5rem );
+  // @media (min-width: 1400px)  {
+  //   padding-inline-start: calc(var(--width-sidebar) + 2.5rem );
 
-  }
+  // }
   background-color: #FCFCFF;
   min-height: 100svh;
   width: 100%;
+  &.minimize {
+    --width-sidebar: 80px ;
+  }
 }
 
 @media (min-width: 575.98px) and (max-width: 1199.98px) {
   .sidebar-wrapper  {
     --width-sidebar: 80px ;
     padding-inline-start: calc(var(--width-sidebar) + 1rem );
+    &.minimize {
+      --width-sidebar: 70px ;
+    }
   }
 
 }
@@ -24,6 +30,9 @@
     --width-sidebar: 0 ;
     padding-inline-start: calc(var(--width-sidebar) + 1rem );
     padding: 1rem ;
-
+    &.minimize {
+      --width-sidebar: 90% ;
+      padding-inline-start:1rem;
+    }
   }
 }

@@ -14,7 +14,27 @@ nav.nav-bar {
   width: 100%;
   box-shadow: 0 14px 34px #F5F3FF;
   .icon-toggle {
-    display: none;
+    // display: none;
+    margin-inline-end: 20px;
+    i {
+      transition: all 0.3s linear;
+      &::before {
+        transition: all 0.3s linear;
+
+      }
+    }
+    cursor: pointer;
+    &:hover {
+      i {
+        transform: scaleX(-1);
+        &::before {
+          content: '\f550';
+          // transform: scale(-1);
+          color: #3F6AFA;
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
   .user-info {
     display: flex;

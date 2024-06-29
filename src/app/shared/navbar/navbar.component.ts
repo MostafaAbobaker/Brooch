@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  asideToggle: boolean = false
 
+  @Output() showAsidebar:EventEmitter<boolean> = new EventEmitter ()
+
+  ToggleAside() {
+    this.asideToggle = !this.asideToggle;
+    this.showAsidebar.emit(this.asideToggle);
+
+  }
 }

@@ -1,0 +1,263 @@
+.reserve-units {
+
+  direction: ltr;
+  transition: all .3s linear;
+  &.full-screen {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100svh;
+    inset-inline-start: 0;
+    top: 0;
+    padding: 1%;
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: rgba(#000, .8);
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      inset-inline-start: 0;
+
+    }
+  }
+  .container-reserve-units {
+    background-color: #F2F5FF;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .header-reserve-units {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      direction: rtl;
+      .input-search{
+        position: relative;
+
+        #inputSearch {
+          padding-inline-start: 40px;
+
+        }
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f002";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          inset-inline-start: 10px;
+        }
+      }
+      .span-group {
+        .span-item {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          &:not(:first-child) {
+            margin-inline-start: -8px;
+
+          }
+        }
+
+      }
+    }
+    .option-Calendar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      button {
+        border: none;
+        align-items: center;
+        background-color: transparent;
+      }
+    }
+    .full-screen {
+      margin-bottom: 10px;
+    }
+  }
+  .content-table {
+    @media  (max-width: 1450px){
+      font-size: 14px;
+    }
+    .table {
+      border-color: #E0E0E0 ;
+      tr {
+        td ,th{
+          border: 1px solid #E0E0E0 ;
+        }
+          th {
+            &:first-child {
+            border: none;
+          }
+        }
+
+      }
+      thead {
+        tr {
+          th {
+            width: calc(100% / 8);
+            vertical-align: top;
+            &:first-child {
+              .content-unit {
+
+                background-color: #F6F6F6;
+                border-radius: .25rem;
+                padding: rem(20);
+                text-align: center;
+                display: block;
+              }
+            }
+            .content-day {
+              display: flex;
+              flex-direction: column;
+              line-height: 22px;
+              .day-name {
+                font-weight: 500;
+              }
+              .day-number {
+                font-size: 22px;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          th {
+            .content-unit {
+              $main-color: #3f6bfa;
+              background-color: rgba($main-color , .1);
+              // background-color: rgba(var( --main-color, 0.3)) ;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: flex-end;
+              padding: 5px;
+              padding-inline-start: 10px;
+              padding-top: 30px;
+              position: relative;
+              border-radius: .25rem;
+              min-height: 100px;
+              .type-unit {
+                font-weight: 400px;
+              }
+              &::before {
+                content: '';
+                width: 3px;
+                height: calc(100% - 10px);
+                background-color:     $main-color ;
+                border-radius: 10px;
+                position: absolute;
+                inset-inline-start: 3px;
+                top: 5px;
+              }
+
+            }
+          }
+          td {
+
+            .stat-unit {
+              // $main-color: #181818;
+              --main-color: 102, 102, 102;
+              --main-opacity: 0.1;
+              background-color: rgba(var(--main-color) ,var(--main-opacity));
+              padding: 7px;
+              padding-inline-start: 15px;
+              position: relative;
+              border-radius: .25rem;
+              .rows {
+                display: flex;
+                justify-content: space-between;
+                &:not(:last-child) {
+                  margin-bottom: 5px;
+                }
+                .label {
+                  font-size: 10px;
+                  background-color:rgba(var(--main-color)) ;
+                  color: var(--white-color);
+                  border-radius: 100px;
+                  padding: 5px 10px;
+                }
+                .edit {
+                  button {
+
+                    border: none;
+                    background-color: var(--white-color);
+                    border-radius: 100px;
+                    padding: 0px 20px;
+                    transition: all 0.3s linear;
+                    &:hover {
+                      box-shadow: 0 0 15px rgba(#000, .2);
+                    }
+                    &::after {
+                      display: none;
+                    }
+                  }
+                }
+              }
+              &::before {
+                content: '';
+                width: 4px;
+                height: calc(100% - 10px);
+                background-color: rgba(var(--main-color)) ;
+                border-radius: 10px;
+                position: absolute;
+                inset-inline-start: 5px;
+                top: 5px;
+              }
+              &.maintenance {
+                --main-color: 24, 24, 24;
+              }
+              &.busy {
+                --main-color: 126, 1, 250;
+              }
+              &.cleaning {
+                --main-color: 255, 151, 15;
+              }
+              &.damaged {
+                --main-color: 216, 53, 49  ;
+              }
+              &.booked {
+                --main-color: 132, 210, 80   ;
+              }
+            }
+            .booking-unit{
+              $main-color: #3F6AFA;
+              background-color: rgba($main-color , .1);
+              // background-color: rgba(var( --main-color, 0.3)) ;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              justify-content: flex-start;
+              padding: 5px;
+              padding-inline-start: 10px;
+              position: relative;
+              border-radius: .25rem;
+              min-height: 100px;
+              opacity: 0;
+              transition: all 0.3s linear;
+              .spead-booking {
+                border: none;
+                background-color: $main-color;
+                color: var(--white-color);
+                border-radius: 7px;
+                padding: 5px 10px;
+              }
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.modal {
+
+  .modal-header {
+    border: none;
+    border-radius: 15px;
+    padding: 20px 15px;
+    background-color: #3F6AFA;
+    box-shadow: 0 15px 15px rgba(#3F6AFA,.25);
+    color: $white-color;
+    margin: 15px;
+    .btn-close {
+      filter: invert(1);
+    }
+  }
+  .modal-footer {
+    button {
+      padding: 10px 25px;
+      width: 20%;
+    }
+  }
+
+}

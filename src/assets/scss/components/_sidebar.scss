@@ -11,6 +11,7 @@ aside.sidebar {
   flex-direction: column;
   justify-content: space-between;
   z-index: 999;
+  transition: all 0.3s linear;
   .sidebar-brand {
     padding: rem(20);
     @media (min-width: 1400px)  {
@@ -96,6 +97,31 @@ aside.sidebar {
     }
   }
 
+}
+.sidebar-wrapper.minimize {
+  aside.sidebar {
+    width: 80px;
+    .sidebar-brand {
+      padding: .75rem;
+      .logo-light {
+        display: none;
+      }
+      .small-logo {
+        display: block;
+        width: 75%;
+      }
+    }
+    .sidebar-nav {
+      li {
+        a {
+          padding: .75rem;
+          .item-name {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 @media (min-width: 575.98px) and (max-width: 1199.98px)
 {

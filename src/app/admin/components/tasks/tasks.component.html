@@ -4,16 +4,16 @@
   </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-9 mb-3">
-        <full-calendar [options]="calendarOptions">
+      <div class="col-lg-9 col-md-12 mb-3">
+        <!-- <full-calendar [options]="calendarOptions">
           <ng-template #eventContent let-arg>
             <b>{{arg.timeText}}</b>
             <i>{{arg.event.title}}</i>
           </ng-template>
-        </full-calendar>
-
+        </full-calendar> -->
+        <app-tasks-details></app-tasks-details>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-12">
         <div class="filter-calander">
           <!-- Start Top -->
           <div class="accordion mb-3" id="accordionPanelsStayOpenExample">
@@ -57,7 +57,7 @@
           <!-- End Top -->
           <div class="title-filter d-flex justify-content-between align-items-center w-100">
             <h6 class="mb-0">المهام</h6>
-            <button class="btn btn-main">
+            <button class="btn btn-main" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
               <span><i class="fa-solid fa-plus"></i></span>
               إضافة مهمة
             </button>
@@ -217,4 +217,162 @@
       </div>
     </div>
   </div>
+
+
+  <button class="add-real" data-bs-toggle="modal" data-bs-target="#newProperty"><i class="fa-solid fa-plus" ></i></button>
 </section>
+
+
+
+<!-- Start Modal -->
+<div class="modal fade resernewPropertyvation-modal" id="newProperty" tabindex="-1" aria-labelledby="newPropertyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="newPropertyModalLabel">
+          إضافة حجز جديد
+
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form >
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"> اسم العقار</label>
+                  <input type="text" class="form-control form-control-lg" >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">اسم الحجز </label>
+                  <div class="position-relative">
+                    <input type="text" class="form-control form-control-lg" placeholder="  ادخل اسم الحجز ">
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <h4>الضيوف</h4>
+              </div>
+              <div class="col-lg-6"><div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"> بالغين</label>
+                <select class="form-select form-select-lg" aria-label="Default select example">
+                  <option selected>العدد</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="3">4</option>
+                </select>
+              </div></div>
+              <div class="col-lg-6"><div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"> اطفال</label>
+                <select class="form-select form-select-lg" aria-label="Default select example">
+                  <option selected>العدد</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="3">4</option>
+                </select>
+              </div></div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label d-block">  تاريخ الدخول</label>
+                  <input type="date" class="form-control form-control-lg" >
+
+
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label d-block">  تاريخ الخروج </label>
+                  <input type="date" class="form-control form-control-lg" >
+
+
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">  حدد السعر</label>
+                  <input type="text" class="form-control form-control-lg" >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"> رقم الجوال
+                    </label>
+                  <input type="text" class="form-control form-control-lg" >
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">  الملاحظات
+                     </label>
+                     <textarea rows="2" placeholder="الملاحظات" class="form-control form-control-lg"></textarea>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-start">
+        <button type="button" class="btn btn-primary">
+          <i class="fa-solid fa-check me-2"></i>
+          حفظ
+        </button>
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">إلغاء</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal -->
+
+
+
+<!-- Start offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header justify-content-center">
+    <h5 class="offcanvas-title " id="offcanvasExampleLabel">إضافة مهمة جديدة</h5>
+  </div>
+  <div class="offcanvas-body">
+    <form action="">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">اسم المهمة</label>
+        <input type="text" class="form-control form-control-lg" placeholder="ادخل اسم المهمة">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> الحالة</label>
+        <select class="form-select form-select-lg" aria-label="Default select example">
+          <option selected>  قم بتحديد حالة المهمة</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label"> اضافة عقار</label>
+        <input type="text" class="form-control form-control-lg" placeholder="  اضافة عقار">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">  الشخص المسند له</label>
+        <input type="text" class="form-control form-control-lg" placeholder="   ادخل اسم الشخص">
+      </div>
+
+      <div class="mb-3 ">
+        <label for="exampleInputEmail1" class="form-label">وصف المهمة</label>
+        <textarea class="form-control form-control-lg"  rows="2" placeholder="الوصف"></textarea>
+      </div>
+
+    </form>
+
+  </div>
+  <div class="offcanvas-footer">
+    <button class="btn btn-primary bg-gradient">إضافة</button>
+    <button class="btn btn-outline-danger" data-bs-dismiss="offcanvas" aria-label="Close">إلغاء</button>
+    </div>
+</div>
+<!-- End offcanvas -->
+

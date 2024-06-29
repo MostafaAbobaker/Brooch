@@ -93,4 +93,42 @@
       }
     }
   }
+  .add-real {
+    background-color: #3F6AFA;
+    color: var(--white-color);
+    border-radius: 50%;
+    border: none;
+    position: fixed;
+    bottom:  rem(10);
+    width: rem(40);
+    height: rem(40);
+    display: grid;
+    place-items: center;
+    z-index: 99;
+    transition: all 0.4s ease-in-out;
+
+    &::after {
+      content: 'إضافة عقار جديد';
+      position: absolute;
+      top: -50px;
+      inset-inline-start: -20px;
+      padding: rem(10);
+      border-radius: 100px;
+      background-color: #3F6AFA;
+      color: #fff;
+      width: 150px;
+      transform: scaleX(0) translate( -40px ,50px);
+      opacity: 0;
+      transition: all 0.3s linear;
+      transform-origin: right;
+    }
+    &:hover {
+      box-shadow:  0 4px 20px rgba(#000,.5);
+      &::after {
+        transform: scaleX(1) translate(0, 0);
+        opacity: 1;
+      }
+
+    }
+  }
 }

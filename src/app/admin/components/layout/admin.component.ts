@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-admin',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent {
+  minimizeScreen:boolean = false;
 
+
+  ToggleAside(e:boolean) {
+    this.minimizeScreen = e;
+    console.log(e);
+  }
 }

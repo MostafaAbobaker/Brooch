@@ -1,0 +1,20 @@
+.offcanvas{
+  .offcanvas-header {
+    border: none;
+    border-radius: 1rem;
+    padding: rem(20) 1rem;
+    background-color: #3F6AFA;
+    box-shadow: 0 15px 15px rgba(63, 106, 250, 0.25);
+    color: var(--white-color);
+    margin: rem(15);
+  }
+  .offcanvas-footer {
+    padding: 15px 10px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 -2px 15px rgba(#000,.2);
+    button {
+      flex: 1 0 0;
+    }
+  }
+}

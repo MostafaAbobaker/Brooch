@@ -8,12 +8,8 @@ import dayGridPlugin from '@fullcalendar/daygrid';
   styleUrls: ['./tasks.component.scss']
 })
 export class TasksComponent {
-  calendarOptions: CalendarOptions = {
-    plugins: [dayGridPlugin],
-    initialView: 'dayGridMonth',
-    weekends: false,
-    events: [
-      { title: 'Meeting', start: new Date() }
-    ]
-  }
+  dateEntry: Date | undefined;
+  exitEntry: Date | undefined;
+
+
 }

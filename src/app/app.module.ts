@@ -7,6 +7,8 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { ToastModule } from 'primeng/toast';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    FullCalendarModule
+    FullCalendarModule,
+    ToastModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

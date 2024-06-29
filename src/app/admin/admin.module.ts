@@ -16,6 +16,10 @@ import { RealEstateComponent } from './components/real-estate/real-estate.compon
 import { InformationPanelComponent } from './components/information-panel/information-panel.component';
 import { ErrorsModule } from '../errors/errors.module';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { TasksDetailsComponent } from './components/tasks-details/tasks-details.component';
+import { ToastModule } from 'primeng/toast';
+import { CalendarModule } from 'primeng/calendar';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     TasksComponent,
     TechnicalSupportComponent,
     RealDetailsComponent,
+    TasksDetailsComponent,
   ],
   imports: [
     CommonModule,
@@ -35,7 +40,10 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     SharedModule,
     RouterModule,
     ErrorsModule,
-    FullCalendarModule
+    FullCalendarModule,
+    ToastModule,
+    CalendarModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

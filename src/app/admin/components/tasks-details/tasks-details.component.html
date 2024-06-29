@@ -1,0 +1,547 @@
+<section class="reserve-units" [class.full-screen]="fullScreen">
+  <div class="container-reserve-units">
+  <div class="header-reserve-units ">
+    <button class="btn btn-outline-primary full-screen " (click)="fullScreen = !fullScreen"> <i class="fa-solid fa-up-right-and-down-left-from-center me-2"></i> FullScreen</button>
+
+    <div class="option-Calendar">
+      <button class="right previous" (click)="getPrevious()"><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="text">
+        {{ currentDate | date : "MM / yyyy" }}
+      </div>
+      <button class="left next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="info">
+      <div class="input-search">
+        <input type="search" name="" id="inputSearch" class="form-control" placeholder="search">
+      </div>
+      <div class="span-group">
+        <div class="span-item bg-warning rounded-circle"></div>
+        <div class="span-item bg-danger rounded-circle"></div>
+        <div class="span-item bg-info rounded-circle"></div>
+        <div class="span-item bg-primary rounded-circle"></div>
+      </div>
+
+    </div>
+  </div>
+  <div class="content-table">
+    <table class=" table">
+      <thead>
+        <tr>
+          <th>
+            <div class="content-unit">
+              عقاراتي
+            </div>
+            </th>
+          <th>
+            <div class="content-day">
+
+              <small class="day-name">SUN</small>
+              <span class="day-number">1</span>
+            </div>
+          </th>
+          <th>
+            <div class="content-day">
+              <small class="day-name">MON</small>
+              <span class="day-number">2</span>
+
+            </div>
+
+          </th>
+          <th>
+            <div class="content-day">
+
+              <small class="day-name">TUE</small>
+              <span class="day-number">3</span>
+
+            </div>
+
+          </th>
+          <th>
+            <div class="content-day">
+
+              <small class="day-name">WED</small>
+              <span class="day-number">4</span>
+            </div>
+
+          </th>
+          <th>
+            <div class="content-day">
+              <small class="day-name">THU</small>
+              <span class="day-number">5</span>
+
+            </div>
+
+          </th>
+          <th>
+            <div class="content-day">
+
+              <small class="day-name">FRI</small>
+              <span class="day-number">6</span>
+            </div>
+
+          </th>
+          <th>
+            <div class="content-day">
+
+              <small class="day-name">SAT</small>
+              <span class="day-number">7</span>
+            </div>
+
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>
+            <div class="content-unit">
+              <small class="type-unit">Brooch</small>
+              <span class="name-unit">شقة 1</span>
+            </div>
+          </th>
+          <td colspan="2">
+            <div class="stat-unit maintenance">
+              <div class="rows d-flex justify-content-between">
+                <div class="title">Ahmed Magdy</div>
+                <div class="label">تحتاج الى صيانة</div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="sign-in">
+                  <i class="fa-solid fa-person-arrow-down-to-line"></i> 1 | Sun
+                </div>
+                <div class="sign-out">
+                  <i class="fa-solid fa-person-arrow-up-from-line"></i> 2 | Mon
+                </div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="info-reserve-units">
+                  <span class="user me-2"><i class="fa-solid fas fa-user    "></i> 2</span>
+                  <span class="mony "><i class="fab fa-dollar-sign"></i> 1000</span>
+                </div>
+                <div class="dropdown edit">
+                  <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-edit    "></i> Edit
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">تحتاج تجهزي الوحدة للمستاجر</a></li>
+                    <li><a class="dropdown-item" href="#">جاهزة للمستاجر </a></li>
+                    <li><a class="dropdown-item" href="#">مشغولة  </a></li>
+                    <li><a class="dropdown-item" href="#">تنظيف و صيانة  </a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editProperty"> تعديل الحجز  </a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </td>
+
+          <td></td>
+          <td></td>
+          <td>
+            <div class="booking-unit">
+              <button class="spead-booking" data-bs-toggle="modal" data-bs-target="#speedBooking">حجز سريع</button>
+            </div>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>
+            <div class="content-unit">
+              <small class="type-unit">Brooch</small>
+              <span class="name-unit">شقة 2</span>
+            </div>
+          </th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td colspan="3">
+            <div class="stat-unit busy">
+              <div class="rows d-flex justify-content-between">
+                <div class="title">Ahmed Magdy</div>
+                <div class="label">  مشغول</div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="sign-in">
+                  <i class="fa-solid fa-person-arrow-down-to-line"></i> 4 | WED
+                </div>
+                <div class="sign-out">
+                  <i class="fa-solid fa-person-arrow-up-from-line"></i> 6 | FRI
+                </div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="info-reserve-units">
+                  <span class="user me-2"><i class="fa-solid fas fa-user    "></i> 2</span>
+                  <span class="mony "><i class="fab fa-dollar-sign"></i> 1700</span>
+                </div>
+                <div class="dropdown edit">
+                  <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-edit    "></i> Edit
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">تحتاج تجهزي الوحدة للمستاجر</a></li>
+                    <li><a class="dropdown-item" href="#">جاهزة للمستاجر </a></li>
+                    <li><a class="dropdown-item" href="#">مشغولة  </a></li>
+                    <li><a class="dropdown-item" href="#">تنظيف و صيانة  </a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editProperty"> تعديل الحجز  </a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </td>
+
+          <td></td>
+        </tr>
+        <tr>
+          <th>
+            <div class="content-unit">
+              <small class="type-unit">Brooch</small>
+              <span class="name-unit">شقة 3</span>
+            </div>
+          </th>
+          <td></td>
+          <td></td>
+          <td colspan="2">
+            <div class="stat-unit booked">
+              <div class="rows d-flex justify-content-between">
+                <div class="title">Ahmed Magdy</div>
+                <div class="label">  محجوز</div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="sign-in">
+                  <i class="fa-solid fa-person-arrow-down-to-line"></i> 4 | WED
+                </div>
+                <div class="sign-out">
+                  <i class="fa-solid fa-person-arrow-up-from-line"></i> 6 | FRI
+                </div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="info-reserve-units">
+                  <span class="user me-2"><i class="fa-solid fas fa-user    "></i> 2</span>
+                  <span class="mony "><i class="fab fa-dollar-sign"></i> 1700</span>
+                </div>
+                <div class="dropdown edit">
+                  <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-edit    "></i> Edit
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">تحتاج تجهزي الوحدة للمستاجر</a></li>
+                    <li><a class="dropdown-item" href="#">جاهزة للمستاجر </a></li>
+                    <li><a class="dropdown-item" href="#">مشغولة  </a></li>
+                    <li><a class="dropdown-item" href="#">تنظيف و صيانة  </a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editProperty"> تعديل الحجز  </a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>
+            <div class="content-unit">
+              <small class="type-unit">Brooch</small>
+              <span class="name-unit">شقة 4</span>
+            </div>
+          </th>
+          <td colspan="4">
+            <div class="stat-unit damaged">
+              <div class="rows d-flex justify-content-between">
+                <div class="title">Ahmed Magdy</div>
+                <div class="label">  تحتاج الى صيانة</div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="sign-in">
+                  <i class="fa-solid fa-person-arrow-down-to-line"></i> 1 | SUN
+                </div>
+                <div class="sign-out">
+                  <i class="fa-solid fa-person-arrow-up-from-line"></i> 4 | WED
+                </div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="info-reserve-units">
+                  <span class="user me-2"><i class="fa-solid fas fa-user    "></i> 2</span>
+                  <span class="mony "><i class="fab fa-dollar-sign"></i> 1700</span>
+                </div>
+                <div class="dropdown edit">
+                  <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-edit    "></i> Edit
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">تحتاج تجهزي الوحدة للمستاجر</a></li>
+                    <li><a class="dropdown-item" href="#">جاهزة للمستاجر </a></li>
+                    <li><a class="dropdown-item" href="#">مشغولة  </a></li>
+                    <li><a class="dropdown-item" href="#">تنظيف و صيانة  </a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editProperty"> تعديل الحجز  </a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>
+            <div class="content-unit">
+              <small class="type-unit">Brooch</small>
+              <span class="name-unit">شقة 5</span>
+            </div>
+          </th>
+
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td colspan="4">
+            <div class="stat-unit busy">
+              <div class="rows d-flex justify-content-between">
+                <div class="title">Ahmed Magdy</div>
+                <div class="label">   مشغولة </div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="sign-in">
+                  <i class="fa-solid fa-person-arrow-down-to-line"></i> 1 | SUN
+                </div>
+                <div class="sign-out">
+                  <i class="fa-solid fa-person-arrow-up-from-line"></i> 4 | WED
+                </div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="info-reserve-units">
+                  <span class="user me-2"><i class="fa-solid fas fa-user    "></i> 2</span>
+                  <span class="mony "><i class="fab fa-dollar-sign"></i> 1700</span>
+                </div>
+                <div class="dropdown edit">
+                  <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-edit    "></i> Edit
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">تحتاج تجهزي الوحدة للمستاجر</a></li>
+                    <li><a class="dropdown-item" href="#">جاهزة للمستاجر </a></li>
+                    <li><a class="dropdown-item" href="#">مشغولة  </a></li>
+                    <li><a class="dropdown-item" href="#">تنظيف و صيانة  </a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editProperty"> تعديل الحجز  </a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <div class="content-unit">
+              <small class="type-unit">Brooch</small>
+              <span class="name-unit">شقة 6</span>
+            </div>
+          </th>
+
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td colspan="2">
+            <div class="stat-unit cleaning">
+              <div class="rows d-flex justify-content-between">
+                <div class="title">Ahmed Magdy</div>
+                <div class="label">   مشغولة </div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="sign-in">
+                  <i class="fa-solid fa-person-arrow-down-to-line"></i> 1 | SUN
+                </div>
+                <div class="sign-out">
+                  <i class="fa-solid fa-person-arrow-up-from-line"></i> 4 | WED
+                </div>
+              </div>
+              <div class="rows d-flex justify-content-between">
+                <div class="info-reserve-units">
+                  <span class="user me-2"><i class="fa-solid fas fa-user    "></i> 2</span>
+                  <span class="mony "><i class="fab fa-dollar-sign"></i> 1700</span>
+                </div>
+                <div class="dropdown edit">
+                  <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-edit    "></i> Edit
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">تحتاج تجهزي الوحدة للمستاجر</a></li>
+                    <li><a class="dropdown-item" href="#">جاهزة للمستاجر </a></li>
+                    <li><a class="dropdown-item" href="#">مشغولة  </a></li>
+                    <li><a class="dropdown-item" href="#">تنظيف و صيانة  </a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editProperty"> تعديل الحجز  </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+
+
+<!-- Start Modal -->
+<div class="modal fade reservation-modal" id="speedBooking" tabindex="-1" aria-labelledby="speedBookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="speedBookingModalLabel">
+           حجز سريع
+
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form >
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">  سعر الحجز</label>
+                  <input type="text" class="form-control form-control-lg" placeholder="ادخل سعر الحجز">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"> مدة الحجز </label>
+                  <div class="position-relative">
+                    <input type="text" class="form-control form-control-lg" placeholder="    عدد اليلالي ">
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-start">
+        <button type="button" class="btn btn-primary w-25">
+          <i class="fa-solid fa-check me-2 "></i>
+          حفظ
+        </button>
+        <button type="button" class="btn btn-outline-danger w-25" data-bs-dismiss="modal">إلغاء</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal -->
+
+<!-- Start Modal -->
+<div class="modal fade reservation-modal" id="editProperty" tabindex="-1" aria-labelledby="editPropertyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editPropertyModalLabel">
+          تعديل حجز
+
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form >
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"> اسم العقار</label>
+                  <input type="text" class="form-control form-control-lg" >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">اسم الحجز </label>
+                  <div class="position-relative">
+                    <input type="text" class="form-control form-control-lg" placeholder="  ادخل اسم الحجز ">
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <h4>الضيوف</h4>
+              </div>
+              <div class="col-lg-6"><div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"> بالغين</label>
+                <select class="form-select form-select-lg" aria-label="Default select example">
+                  <option selected>العدد</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="3">4</option>
+                </select>
+              </div></div>
+              <div class="col-lg-6"><div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"> اطفال</label>
+                <select class="form-select form-select-lg" aria-label="Default select example">
+                  <option selected>العدد</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="3">4</option>
+                </select>
+              </div></div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label d-block">  تاريخ الدخول</label>
+                  <input type="date" class="form-control form-control-lg" >
+
+
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label d-block">  تاريخ الخروج </label>
+                  <input type="date" class="form-control form-control-lg" >
+
+
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">  حدد السعر</label>
+                  <input type="text" class="form-control form-control-lg" >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"> رقم الجوال
+                    </label>
+                  <input type="text" class="form-control form-control-lg" >
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">  الملاحظات
+                     </label>
+                     <textarea rows="2" placeholder="الملاحظات" class="form-control form-control-lg"></textarea>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-start">
+        <button type="button" class="btn btn-primary">
+          <i class="fa-solid fa-check me-2"></i>
+          حفظ
+        </button>
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">إلغاء</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal -->
