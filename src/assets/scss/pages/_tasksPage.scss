@@ -1,5 +1,14 @@
 .tasks-page {
   .filter-calander {
+    max-height: 750px;
+    overflow-y: auto;
+    @media  (max-width: 1400px) {
+      max-height: 470px;
+  }
+  @media  (max-width: 700px) {
+    max-height: unset;
+
+  }
     .accordion {
       .accordion-item {
         border: none;
