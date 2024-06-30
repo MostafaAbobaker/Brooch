@@ -12,8 +12,8 @@
       <div class="col-lg-5">
         <div class="forms-groups">
 
-          <form class="form" [formGroup]="registerForm"  >
-            <div class="form-login bg-white    text-start">
+          <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-login bg-white text-start">
               <div class="mb-3">
                 <label for="name" class="form-label">الاسم</label>
                 <input type="text" class="form-control" id="name" formControlName="name" placeholder="ادخل الاسم "
