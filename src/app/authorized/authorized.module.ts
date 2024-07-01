@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { ToastModule } from 'primeng/toast';
 import { AuthorizedRoutingModule } from './authorized-routing.module';
 import { AuthorizedComponent } from './authorized.component';
 import { LoginComponent } from './login/login.component';
@@ -23,7 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterLink,
     ReactiveFormsModule,
     FormsModule,
-
+    ToastModule,
   ]
 })
 export class AuthorizedModule { }

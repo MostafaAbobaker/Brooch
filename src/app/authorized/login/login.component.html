@@ -8,7 +8,7 @@
         </div>
         <h4 class="text-white">لإدارة ومتابعة الممتلكات الخاصة بك</h4>
       </header>
-        <form class="form" [formGroup]="loginForm"  >
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="login()">
           <div class="form-login bg-white    text-start">
 
           <div class="mb-3">
@@ -33,10 +33,10 @@
           <a [routerLink]="['../forgotPassword']"  class="text-end d-block mb-3">نسيت كلمة المرور</a>
 
 
-          <a type="submit" routerLink="/home"  class="btn btn-primary bg-gradient
+          <button type="submit" class="btn btn-primary bg-gradient
           w-100 d-block mb-3"   >
            تسجيل الدخول
-            </a>
+          </button>
             <p class="text-center mb-0">
               ليس لديك حساب؟
               <a  [routerLink]="['../register']"   >سجل هنا</a>

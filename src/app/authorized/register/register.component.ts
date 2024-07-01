@@ -54,28 +54,4 @@ export class RegisterComponent {
       this._messageService.add({ severity: 'error', summary: 'Error', detail: this.message });
     }
   }
-
-  register(form: FormGroup) {
-    console.log(form.value);
-    // if(form.valid) {
-    //   this.isLoading = true
-    //   this._authService.login(form.value).subscribe({
-    //     next:(data) => {
-    //       // console.log(data)
-    //       this.isLoading = false;
-    //       localStorage.setItem("userToken",data.token)
-    //       this._authService.getUserData()
-    //       this._router.navigate(['/home'])
-
-    //     },
-    //     error:(err) => {
-    //       this.errApi = err.error.errors.msg;
-    //       this.errApi = err.errors.message;
-    //       console.log(err);
-    //     },
-
-    //   })
-    // }
-  }
-
 }
