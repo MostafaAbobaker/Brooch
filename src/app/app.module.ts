@@ -12,8 +12,6 @@ import { CalendarModule } from 'primeng/calendar';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorInterceptor } from './shared/interceptor/http-interceptor.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdminModule } from './admin/admin.module';
-import { AddNewPropertyComponent } from './admin/components/add-new-property/add-new-property.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +30,6 @@ import { AddNewPropertyComponent } from './admin/components/add-new-property/add
     ToastModule,
     CalendarModule,
     BrowserAnimationsModule,
-<<<<<<< HEAD
-=======
-    HttpClientModule
->>>>>>> bd57c4928c9b76f39f2a6b7b1b68c4aa8731a43c
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorInterceptor,multi: true

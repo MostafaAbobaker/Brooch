@@ -8,7 +8,6 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { RegisterComponent } from './register/register.component';
 import { RouterLink } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ToastModule } from 'primeng/toast';
 
 
 @NgModule({
@@ -24,12 +23,8 @@ import { ToastModule } from 'primeng/toast';
     RouterLink,
     ReactiveFormsModule,
     FormsModule,
-<<<<<<< HEAD
     ToastModule
 
-=======
-    ToastModule,
->>>>>>> bd57c4928c9b76f39f2a6b7b1b68c4aa8731a43c
   ]
 })
 export class AuthorizedModule { }
