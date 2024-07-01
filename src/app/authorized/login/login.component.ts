@@ -3,15 +3,15 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   providers: [MessageService]
-
 })
 export class LoginComponent {
+  message: string = '';
+  isLoading: boolean = false;
   showPassword:boolean = false;
 
   constructor(
@@ -21,7 +21,7 @@ export class LoginComponent {
 
   loginForm: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required , Validators.pattern(/^[A-Z][a-z0-9]{3,8}$/)]),
+    password: new FormControl('', [Validators.required]),
   })
 
 

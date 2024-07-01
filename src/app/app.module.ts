@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterLink, RouterModule } from '@angular/router';
@@ -32,6 +32,10 @@ import { AddNewPropertyComponent } from './admin/components/add-new-property/add
     ToastModule,
     CalendarModule,
     BrowserAnimationsModule,
+<<<<<<< HEAD
+=======
+    HttpClientModule
+>>>>>>> bd57c4928c9b76f39f2a6b7b1b68c4aa8731a43c
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorInterceptor,multi: true
