@@ -2,15 +2,22 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [MessageService]
+
 })
 export class LoginComponent {
   showPassword:boolean = false;
-  constructor(private _authService:AuthService , private _router:Router) { }
+
+  constructor(
+    private _authService:AuthService ,
+     private _router:Router,
+     private messageService: MessageService) { }
 
   loginForm: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -20,7 +27,9 @@ export class LoginComponent {
 
   login(form: FormGroup) {
     console.log(form.value);
-    this._router.navigate(['/home'])
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
+
+    // this._router.navigate(['/home'])
     // if(form.valid) {
     //   this.isLoading = true
     //   this._authService.login(form.value).subscribe({

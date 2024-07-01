@@ -20,6 +20,8 @@ import { TasksDetailsComponent } from './components/tasks-details/tasks-details.
 import { ToastModule } from 'primeng/toast';
 import { CalendarModule } from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
+import { AddNewPropertyComponent } from './components/add-new-property/add-new-property.component';
+import { EditNewReservationComponent } from './components/edit-new-reservation/edit-new-reservation.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { FormsModule } from '@angular/forms';
     TechnicalSupportComponent,
     RealDetailsComponent,
     TasksDetailsComponent,
+    AddNewPropertyComponent,
+    EditNewReservationComponent,
   ],
   imports: [
     CommonModule,
@@ -44,6 +48,6 @@ import { FormsModule } from '@angular/forms';
     ToastModule,
     CalendarModule,
     FormsModule,
-  ],
+  ]
 })
 export class AdminModule { }

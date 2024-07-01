@@ -6,9 +6,10 @@
     <div class="option-Calendar">
       <button class="right previous" (click)="getPrevious()"><i class="fa-solid fa-chevron-left"></i></button>
       <div class="text">
-        {{ currentDate | date : "MM / yyyy" }}
+        <!-- {{ currentDate | date : "MM / yyyy" }} -->
+        {{ monthThis | date : "MM / yyyy"   }}
       </div>
-      <button class="left next"><i class="fa-solid fa-chevron-right"></i></button>
+      <button class="left next" (click)="getNext()"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
     <div class="info">
       <div class="input-search">
@@ -1561,108 +1562,3 @@
 </div>
 <!-- End Modal -->
 
-<!-- Start Modal -->
-<div class="modal fade reservation-modal" id="editProperty" tabindex="-1" aria-labelledby="editPropertyModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editPropertyModalLabel">
-          تعديل حجز
-
-        </h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form >
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label"> اسم العقار</label>
-                  <input type="text" class="form-control form-control-lg" >
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">اسم الحجز </label>
-                  <div class="position-relative">
-                    <input type="text" class="form-control form-control-lg" placeholder="  ادخل اسم الحجز ">
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <h4>الضيوف</h4>
-              </div>
-              <div class="col-lg-6"><div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"> بالغين</label>
-                <select class="form-select form-select-lg" aria-label="Default select example">
-                  <option selected>العدد</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="3">4</option>
-                </select>
-              </div></div>
-              <div class="col-lg-6"><div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"> اطفال</label>
-                <select class="form-select form-select-lg" aria-label="Default select example">
-                  <option selected>العدد</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="3">4</option>
-                </select>
-              </div></div>
-              <div class="col-lg-6">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label d-block">  تاريخ الدخول</label>
-                  <input type="date" class="form-control form-control-lg" >
-
-
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label d-block">  تاريخ الخروج </label>
-                  <input type="date" class="form-control form-control-lg" >
-
-
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">  حدد السعر</label>
-                  <input type="text" class="form-control form-control-lg" >
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label"> رقم الجوال
-                    </label>
-                  <input type="text" class="form-control form-control-lg" >
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">  الملاحظات
-                     </label>
-                     <textarea rows="2" placeholder="الملاحظات" class="form-control form-control-lg"></textarea>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer justify-content-start">
-        <button type="button" class="btn btn-primary">
-          <i class="fa-solid fa-check me-2"></i>
-          حفظ
-        </button>
-        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">إلغاء</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End Modal -->

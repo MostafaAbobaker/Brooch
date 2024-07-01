@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, NgZone, OnChanges, SimpleChanges } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -9,13 +9,12 @@ import { Subject } from 'rxjs';
 export class TasksDetailsComponent  implements OnChanges{
   fullScreen:boolean = false;
   currentDate:Date;
-  monthText = new Subject<Date>();
-
+  monthThis:string | undefined ;
 
   constructor() {
     this.currentDate = new Date();
-    this.monthText.next(new Date());
-    this.getPrevious
+    this.monthThis = new Date().toDateString();
+
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -25,7 +24,14 @@ export class TasksDetailsComponent  implements OnChanges{
 
   getPrevious() {
     this.currentDate.setMonth(this.currentDate.getMonth() - 1);
-    console.log(this.currentDate);
-
+      this.monthThis = this.currentDate.toDateString();
+      console.log(this.currentDate);
   }
+
+  getNext() {
+    this.currentDate.setMonth(this.currentDate.getMonth() + 1);
+      this.monthThis = this.currentDate.toDateString();
+      console.log(this.currentDate);
+  }
+
 }

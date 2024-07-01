@@ -12,10 +12,13 @@ import { CalendarModule } from 'primeng/calendar';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorInterceptor } from './shared/interceptor/http-interceptor.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminModule } from './admin/admin.module';
+import { AddNewPropertyComponent } from './admin/components/add-new-property/add-new-property.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FullCalendarModule,
     ToastModule,
     CalendarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorInterceptor,multi: true
